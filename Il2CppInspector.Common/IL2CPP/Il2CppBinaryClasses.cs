@@ -62,6 +62,11 @@ namespace Il2CppInspector
         [Version(Min = 22)]
         public ulong unresolvedVirtualCallPointers;
 
+        [Version(Min = 29)]
+        public ulong unresolvedInstanceCallPointers;
+        [Version(Min = 29)]
+        public ulong unresolvedStaticCallPointers;
+
         // Added in metadata v23
         [Version(Min = 23)]
         public ulong interopDataCount;

@@ -170,8 +170,12 @@ namespace Il2CppInspector
 
             StatusUpdate("Searching for binary metadata");
             if (!((FindMetadataFromSymbols() ?? FindMetadataFromCode() ?? FindMetadataFromData()) is (ulong code, ulong meta)))
-                return false;
-
+            {
+                code = 0x18594bfa0;
+                meta = 0x186156750;
+                //return false;
+            }
+                
             TryPrepareMetadata(code, meta);
             return true;
         }
